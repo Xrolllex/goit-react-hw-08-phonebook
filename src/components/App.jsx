@@ -1,16 +1,24 @@
-export const App = () => {
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchContactsAsync } from '../redux/actions';
+import ContactForm from './Form';
+import ContactList from './List';
+
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContactsAsync());
+  }, [dispatch]);
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <h1>Phonebook</h1>
+      <ContactForm />
+      <h2>Contacts</h2>
+      <ContactList />
     </div>
   );
 };
+
+export default App;
