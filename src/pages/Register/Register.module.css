@@ -1,0 +1,28 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-left: 20px;
+  }
+  
+  .label {
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 255, 0.219);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border: 1px solid transparent;
+  }
+
+  .input {
+    border: 1px solid rgba(0, 0, 255, 0.219);
+    border-radius: 15px;
+    padding: 10px;
+  }

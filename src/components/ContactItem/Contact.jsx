@@ -1,19 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeContact } from '../../redux/contacts/operations';
+import css from '../../pages/Register/Register.module.css';
 
-const ContactItem = ({ contact, onDelete }) => (
-  <li className="contact-item">
-    {contact.name}: {contact.phone}
-    <button className="button-del" onClick={onDelete}>Delete</button>
-  </li>
-);
 
-ContactItem.propTypes = {
-  contact: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
-  }).isRequired,
-  onDelete: PropTypes.func.isRequired,
+const ElementItem = ({ contact }) => {
+  const dispatch = useDispatch();
+
+  // Sprawdź, czy "contact" istnieje, zanim spróbujesz uzyskać dostęp do jego właściwości
+  if (!contact) {
+    return null; // Lub obsłuż przypadek, gdy "contact" nie jest dostępny
+  }
+
+  const deleteContact = () => dispatch(removeContact(contact.id));
+
+  return (
+    <li>
+      {contact.name} {contact.number}{' '}
+      <button className={css.btn} type="button" onClick={deleteContact}>
+        Delete
+      </button>
+    </li>
+  );
 };
 
-export default ContactItem;
+export default ElementItem;
