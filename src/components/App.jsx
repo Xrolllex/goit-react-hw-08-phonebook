@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContactsAsync } from '../redux/actions';
-import ContactForm from './Form';
-import ContactList from './List';
+import ContactForm from './ContactForm/Form';
+import ContactList from './List/List';
 
 const App = () => {
   const dispatch = useDispatch();

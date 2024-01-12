@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { actions } from '../redux/store';
+import { actions } from '../../redux/store';
 
 const { addNewContactAsync } = actions;
 

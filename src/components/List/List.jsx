@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { actions } from '../redux/store';
-import ContactItem from './Contact';
+import { actions } from '../../redux/store';
+import ContactItem from '../ContactItem/Contact';
 
 
 const { deleteContactAsync, updateFilter } = actions;
