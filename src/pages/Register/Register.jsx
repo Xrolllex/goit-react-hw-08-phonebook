@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import css from './Register.module.css';
+import css from '../../components/general.module.css';
 import { register } from '../../redux/auth/operations';
 import { Helmet } from 'react-helmet-async';
 

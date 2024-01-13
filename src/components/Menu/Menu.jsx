@@ -15,9 +15,11 @@ const MenuBar = () => {
        <header className={css.menuBar}>
         {isLoggedIn ? (
           <>
-            <NavLink className={css.links} to="/">Contacts</NavLink>
-            <div>Welcome {userName}</div>
+            <NavLink className={css.contact} to="/">Contacts</NavLink>
+            <div className={css.welcome}>
+              <p>Welcome: <span className={css.userName}>{userName}</span></p> 
             <LogoutBtn />
+            </div>
           </>
         ) : (
           <div className={css.loginsBtn}>

@@ -1,12 +1,13 @@
 .btn {
-    margin-top: 20px;
+    margin-top: 11px;
     width: 100px;
     border-radius: 15px;
     background-color: rgba(0, 0, 255, 0.219);
     color: rgb(0, 0, 0);
-    padding: 5px;
+    height: 30px;
     border: 1px solid transparent;
-    
+    margin-left: 15px;
+
   }
 
   

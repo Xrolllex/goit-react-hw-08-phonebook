@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeContact } from '../../redux/contacts/operations';
-import css from '../../pages/Register/Register.module.css';
+import css from '../general.module.css';
 
 
 const ElementItem = ({ contact }) => {

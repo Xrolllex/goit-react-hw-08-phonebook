@@ -25,3 +25,24 @@
 .loginsBtn {
     margin-left: 50px;
 }
+
+.welcome {
+    display: flex;
+   
+    
+}
+
+.userName{
+    margin-left:10px;
+    font-weight: bold;
+}
+
+.contact {
+    text-decoration: none;
+    margin-top: 12px;
+    font-weight: bold;
+    color: black;
+    margin-left: 25px;
+    font-size: 18px;
+    margin-right: 25px;
+}
